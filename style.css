@@ -43,6 +43,14 @@ h1 {
     letter-spacing: 1px;
 }
 
+.idiom-meaning {
+    max-width: 800px;
+    margin: 20px auto 0;
+    color: #666;
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
 section {
     background: white;
     border-radius: var(--border-radius);
@@ -59,6 +67,54 @@ h2 {
     border-bottom: 2px solid #eee;
 }
 
+/* 视频部分样式 */
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 比例 */
+    margin-bottom: 30px;
+}
+
+.video-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.video-info {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.audio-details h3,
+.video-description h3 {
+    color: var(--primary-color);
+    font-size: 1.3em;
+    margin-bottom: 15px;
+}
+
+.audio-details ul {
+    list-style: none;
+    padding: 0;
+}
+
+.audio-details li {
+    margin-bottom: 10px;
+    color: #666;
+}
+
+.video-description p {
+    color: #666;
+    line-height: 1.8;
+}
+
+/* 提示词列表样式 */
 .prompt-list ul {
     list-style-type: decimal;
     padding-left: 20px;
@@ -78,6 +134,7 @@ h2 {
     transform: translateY(-2px);
 }
 
+/* 图片网格样式 */
 .image-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -120,6 +177,7 @@ h2 {
     opacity: 1;
 }
 
+/* 响应式设计 */
 @media (max-width: 768px) {
     .container {
         margin: 20px auto;
@@ -127,6 +185,11 @@ h2 {
     
     section {
         padding: 20px;
+    }
+    
+    .video-info {
+        grid-template-columns: 1fr;
+        gap: 20px;
     }
     
     .image-grid {
@@ -139,6 +202,10 @@ h2 {
     
     .prompt-list li {
         padding: 15px;
+    }
+    
+    .video-container {
+        padding-bottom: 75%; /* 4:3 比例，更适合移动端 */
     }
 }
 
@@ -153,5 +220,36 @@ h2 {
     
     .image-item img {
         height: 250px;
+    }
+    
+    .idiom-meaning {
+        font-size: 1em;
+    }
+}
+
+/* 优化打印样式 */
+@media print {
+    body {
+        background: white;
+    }
+    
+    .container {
+        margin: 0;
+        padding: 0;
+    }
+    
+    .video-section {
+        display: none;
+    }
+    
+    .image-item {
+        break-inside: avoid;
+    }
+    
+    .image-caption {
+        opacity: 1;
+        position: relative;
+        background: none;
+        color: black;
     }
 }
