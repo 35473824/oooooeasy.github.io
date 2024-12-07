@@ -3,18 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>画龙点睛 - 文生图展示</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>画龙点睛 - AI创意展示</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
         <header class="site-header">
             <h1>画龙点睛 <span class="pinyin">huà lóng diǎn jīng</span></h1>
+            <p class="idiom-meaning">比喻在关键处点上最重要的东西，使作品生动出色。源自古代传说，画家张僧繇画龙时，最后点上眼睛，龙就会活过来飞走。</p>
         </header>
         
         <main>
+            <section class="video-section">
+                <h2>视频展示</h2>
+                <div class="video-container">
+                    <video id="mainVideo" controls poster="images/video-poster.png">
+                        <source src="videos/hualongdianjing.mp4" type="video/mp4">
+                        您的浏览器不支持视频播放。
+                    </video>
+                </div>
+                <div class="video-info">
+                    <div class="audio-details">
+                        <h3>音频信息</h3>
+                        <ul>
+                            <li>背景音乐：《梦境》</li>
+                        </ul>
+                    </div>
+                    <div class="video-description">
+                        <h3>视频说明</h3>
+                        <p>本视频通过AI技术，将中国传统成语"画龙点睛"以动画形式重现。整个过程展现了从画家构思、众人观看到龙腾飞的完整故事，配以古风背景音乐和专业解说，带您感受中国传统文化的魅力。</p>
+                    </div>
+                </div>
+            </section>
+
             <section class="text-prompts">
-                <h2>故事场景描述</h2>
+                <h2>关键帧描述</h2>
                 <div class="prompt-list">
                     <ul>
                         <li>一位年长的画家身穿传统服饰，站在墙前，墙上画着两条栩栩如生的龙。画家神情专注，手指轻轻划过其中一条龙的眼睛，背景是一个古色古香的房间。</li>
@@ -31,7 +54,7 @@
             </section>
 
             <section class="image-gallery">
-                <h2>场景展示</h2>
+                <h2>关键帧展示</h2>
                 <div class="image-grid">
                     <div class="image-item">
                         <img src="images/image1.png" alt="画龙点睛场景1">
